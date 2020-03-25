@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!--
+  xml引用头文件:
+    <!DOCTYPE data [
+    <!ELEMENT data (path,value*)>
+    <!ELEMENT path (#PCDATA)>
+    <!ELEMENT value (#PCDATA|list)*>
+    <!ELEMENT list (#PCDATA)>
+    <!ATTLIST value id CDATA #REQUIRED >
+    <!ATTLIST value type (int|String|boolean) #REQUIRED >]>
+-->
+<!ELEMENT data (path,value*)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT value (#PCDATA|list)*>
+<!ELEMENT list (#PCDATA)>
+<!ATTLIST value id CDATA #REQUIRED >
+<!ATTLIST value type (int|String|boolean) #REQUIRED >
