@@ -53,18 +53,24 @@ public class ClasspathXmlPojoFactory implements Pojofactory {
      */
     public <T> T getPojo(Class<T> pojo) {
 
-        T user = null;
+        T object = null;
         try {
-            user = pojo.newInstance();
-            Method[] M = user.getClass().getMethods();
-            autoAssign(M, user);
+            object = pojo.newInstance();
+            Method[] M = object.getClass().getMethods();
+            autoAssign(M, object);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return user;
+        return object;
     }
 
+    /**
+     * 自动填充pojo类
+     *
+     * @param method pojo反射方法类
+     * @param object pojo类
+     */
     private void autoAssign(Method[] method, Object object) {
         try {
 
